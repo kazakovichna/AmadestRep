@@ -42,23 +42,26 @@
             </div>
         </div>
         <div class="body"
-            :class="{bodyGridPc: scaleX > 768,
-                     bodyGridPh: scaleX <= 768}"
+            :class="{bodyGridPc: scaleX >= 768,
+                     bodyGridPh: scaleX < 768}"
         >
             <div class="mainName"
-                :class="{mainNameLg: scaleX >= 1080,
-                         mainNameMd: (scaleX >= 768 && scaleX < 1080),
+                :class="{mainNameFullLg: scaleX >= 1440,
+                         mainNameLg: scaleX < 1440 && scaleX >= 1024,
+                         mainNameMd: scaleX >= 768 && scaleX < 1024,
                          mainNameSm: scaleX < 768}"
             >
                 ДВФУ
             </div>
             <div class="descrFrst"
-                :class="{descrFrstLg: scaleX >= 1024,
-                         descrFrstMd: (scaleX >= 768 && scaleX < 1080),
+                :class="{descrFrstFullLg: scaleX >= 1440,
+                         descrFrstLg: scaleX >= 1024 && scaleX < 1440 ,
+                         descrFrstMd: (scaleX >= 768 && scaleX < 1024),
                          descrFrstSm: scaleX < 768}"
             >
                 <div class="one2"
-                    :class="{one2Md: scaleX > 768 && scaleX < 1080}"
+                    :class="{one2Lg: scaleX >= 1024 && scaleX < 1440,
+                             one2Md: scaleX >= 768 && scaleX < 1024}"
                     v-if="scaleX >= 768">
                     НИВЕРСИТЕТ-
                 </div>
@@ -67,34 +70,44 @@
                     УНИВЕРСИТЕТ-
                 </div>
                 <div class="two2"
-                    :class="{two2Md: scaleX > 768 && scaleX < 1080}"
+                    :class="{two2Lg: scaleX >= 1024 && scaleX < 1440,
+                             two2Md: scaleX >= 768 && scaleX < 1024}"
                 >
-                    ЭТО ЛУЧШЕЕ МЕСТО ЧТОБЫ СОЗДАВАТЬ БУДУЮЩЕЕ ПРИСОЕДИНЯЙСЯ К НАМ!
+                    ЭТО ЛУЧШЕЕ МЕСТО ЧТОБЫ СОЗДАВАТЬ <br> БУДУЩЕЕ ПРИСОЕДИНЯЙСЯ К НАМ!
                 </div>
             </div>
         </div>
         <div class="body2"
-            :class="{body2Lg: scaleX >= 1080,
-                     body2Md: scaleX >= 768 && scaleX < 1080,
+            :class="{body2Lg: scaleX >= 768,
                      body2Sm: scaleX < 768}"
         >
             <div class="descrSec"
-                :class="{descrSecSm: scaleX < 768}"
+                :class="{descrSecFullLg: scaleX >= 1440,
+                         descrSecLg: scaleX >= 1024 && scaleX < 1440,
+                         descrSeсMd: scaleX >= 768 && scaleX < 1024,
+                         descrSecSm: scaleX < 768}"
             >
-                МЫ КОНЦЕНТРИРУЕМ ЛУЧШИЕ
+                <div>
+                    МЫ КОНЦЕНТРИРУЕМ ЛУЧШИЕ
                 ИНТЕЛЛЕКТУАЛЬНЫЕ СИЛЫ НАШЕЙ СТРАНЫ,
                 ГОТОВИМ КАДРЫ ДЛЯ НОВОЙ ЭКОНОМИКИ,
-                ЗАПУСКАЕМ ОБРАЗОВАТЕЛЬНЫЕ
+                ЗАПУСКАЕМ ОБРАЗОВАТЕЛЬНЫЕ <br>
                 ПРОГРАММЫ В ИНТЕРЕСАХ РАБОТОДАТЕЛЕЙ.
+                </div>
             </div>
             <div class="descrTrd"
-                :class="{descrSecSm: scaleX < 768}"
+                :class="{descrTrdFullLg: scaleX >= 1440,
+                         descrTrdLg: scaleX >= 1024 && scaleX < 1440,
+                         descrTrdMd: scaleX >= 768 && scaleX < 1024,
+                         descrSecSm: scaleX < 768}"
             >
-                ВМЕСТЕ С ПАРТНЕРАМИ МЫ ОТВЕЧАЕМ
-                НА ГЛОБАЛЬНЫЕ ВЫЗОВЫ, 
-                СТРЕМИМСЯ БЫТЬ ЗАМЕТНЫМИ 
-                В МИРОВОМ МАСШТАБЕ, 
-                РАЗВИВАЕМ НАУКУ И ОБРАЗОВАНИЕ.
+                <div>
+                    ВМЕСТЕ С ПАРТНЕРАМИ МЫ ОТВЕЧАЕМ <br>
+                НА ГЛОБАЛЬНЫЕ ВЫЗОВЫ, <br>
+                СТРЕМИМСЯ БЫТЬ ЗАМЕТНЫМИ <br>
+                В МИРОВОМ МАСШТАБЕ, <br>
+                РАЗВИВАЕМ НАУКУ И ОБРАЗОВАНИЕ.    
+                </div>
             </div>
         </div>
     </div>
@@ -185,6 +198,7 @@ export default {
 
     /* Настройка адаптива боди */
     .body {
+        width: 100%;
         margin: 1% 1% 0 1%;
         display: grid;
         color: white;
@@ -192,7 +206,7 @@ export default {
     }
     .bodyGridPc {
         grid-template-columns: 1fr 1fr;
-        margin-left: 10%;
+        /* margin-left: 10%; */
     }
     .bodyGridPh {
         grid-template-rows: 1fr 1fr;
@@ -203,11 +217,24 @@ export default {
         font-weight: 800;
         opacity: 75%;
     }
-    .mainNameLg {
+    .mainNameFullLg {
+        z-index: 2;
+        position: relative;
+        left: 18%;
         text-align: right;
         font-size: 220px;
     }
+    .mainNameLg {
+        z-index: 2;
+        position: relative;
+        left: 10%;
+        text-align: right;
+        font-size: 155px;
+    }
     .mainNameMd {
+        z-index: 2;
+        position: relative;
+        left: 15%;
         text-align: right;
         font-size: 100px;
     }
@@ -218,14 +245,23 @@ export default {
     .descrFrst {
         display: flex;
     }
+    .descrFrstFullLg {
+        padding: 0 0 10% 18%;
+        background-color: rgba(0, 0, 0, 0.35);
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
     .descrFrstLg {
-        margin-bottom: 15%;
-        
+        padding: 0 0 6% 10%;
+        background-color: rgba(0, 0, 0, 0.35);
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
     }
     .descrFrstMd {
+        padding: 0 0 2% 15%;
+        background-color: rgba(0, 0, 0, 0.35);
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
@@ -243,8 +279,12 @@ export default {
         font-weight: 700;
         opacity: 75%;
     }
-    .one2Md {
+    .one2Lg {
         font-size: 30px;
+        font-weight: 600;
+    }
+    .one2Md {
+        font-size: 25px;
     }
     .one3 {
         font-size: 33px;
@@ -252,18 +292,23 @@ export default {
     .two2 {
         width: 70%;
     }
+    .two2Lg {
+        font-size: 14px;
+        font-weight: 400;
+    }
     .two2Md {
-        width: 100%;
+        width: 98%;
+        font-size: 12px;
+        font-weight: 400;
     }
     .body2 {
         color: white;
-        display: flex;
+        display: grid;
         font-family: 'Roboto', sans-serif;
     }
     .body2Lg {
-        width: 60%;
-        justify-content: center;
-        align-items: flex-start;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
     }  
     .body2Md {
         margin-top: 5%;
@@ -280,18 +325,85 @@ export default {
         background-color: rgba(0, 0, 0, 0.4);
     }
     .descrSec {
-        width: 50%;
-        margin: 2%;
-        font-weight: 600;
+        font-weight: 500;
         text-align: right;
     }
     .descrTrd {
         width: 50%;
-        margin: 2%;
-        font-weight: 600;
+        font-weight: 500;
         text-align: left;
+    }
+    .descrTrdFullLg {
+        width: 100%;
+        height: 1080px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .descrTrdFullLg div {
+        margin: 5%;
+        width: 400px;
+        height: 90px;
+    }
+    .descrTrdLg {
+        width: 100%;
+        height: 1080px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .descrTrdLg div {
+        margin: 5%;
+        width: 400px;
+        height: 90px;
+    }
+    .descrTrdMd {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .descrTrdMd div {
+        font-size: 14px;
+        margin: 5% 0 0 5%;
+        width: 350px;
+        height: 90px;
     }
     .descrSecSm {
         width: 90%;
+    }
+    .descrSecFullLg {
+        width: 100%;
+        height: 1080px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .descrSecFullLg div { 
+        margin: 5%;
+        width: 400px;
+        height: 90px;
+    }
+    .descrSecLg {
+        width: 100%;
+        height: 1080px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .descrSecLg div {
+        margin: 5%;
+        width: 400px;
+        height: 90px;
+    }
+    .descrSeсMd {
+        width: 100%;
+        height: 1080px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .descrSeсMd div {
+        font-size: 14px;
+        margin: 5% 5% 0 0;
+        width: 350px;
+        height: 90px;
     }
 </style>
