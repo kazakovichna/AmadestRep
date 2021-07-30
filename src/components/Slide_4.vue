@@ -316,7 +316,7 @@ export default{
     .row3 {
         width: 60%;
         background-color: rgba(255, 255, 255, 0.75);
-        padding: 1% 3% 1% 3%;
+        padding: 3% 3% 3% 3%;
     }
     .row3Pl {
         width: 80%;

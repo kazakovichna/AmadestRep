@@ -153,6 +153,7 @@ export default {
       set_scale() {
         this.screenX = window.innerWidth
         this.screenY = window.innerHeight
+        
       },
       GoTo (numPage) {
           this.$refs.fullpage.api.moveTo(numPage)
@@ -164,6 +165,8 @@ export default {
   mounted() {
     this.back = document.querySelector('.pageSwiperNavigateDiv')
     this.back.style.height = `${this.screenY}px`
+    console.log(window.innerWidth)
+    console.log(window.innerHeight)
   },
 }
 </script>

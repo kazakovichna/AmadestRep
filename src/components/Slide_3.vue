@@ -13,13 +13,18 @@
                      row3Ph: scaleX < 768}"
         >
             <div class="row3Head"
-                :class="{row3HeadPl: scaleX >= 768 && scaleX < 1024,
+                :class="{row3Head2K: scaleX >= 1440,
+                         row3HeadLg: scaleX >= 1024 && scaleX < 1440,
+                         row3HeadPl: scaleX >= 768 && scaleX < 1024,
                          row3HeadPh: scaleX < 768}"
             >
                 ПАРТНЕРСКИЕ ОБРАЗОВАТЕЛЬНЫЕ МОДУЛИ
             </div>
             <div class="imgDiv"
-                :class="{imgDivMd: scaleX > 768 && scaleX < 1370 && scaleY < 640,
+                :class="{imgDiv2K: scaleX >= 2000,
+                         imgDivFullLg: scaleX >= 1440 && scaleX < 2000,
+                         imgDivLg: scaleX >= 1370 && scaleX < 1440,
+                         imgDivMd: scaleX > 768 && scaleX < 1370 && scaleY < 640,
                          imgDivPl: scaleX > 425 && scaleX <= 768,
                          imgDivPh: scaleX <= 425}"
             >
@@ -101,11 +106,29 @@ export default{
         font-size: 20px;
         margin-bottom: 2%;
     }
+    .row3Head2K {
+        font-size: 24px;
+    }
+    .row3HeadLg {
+        font-size: 20px;
+    }
     .row3HeadPl {
         font-size: 15px;
     }
     .row3HeadPh {
         font-size: 12px;
+    }
+    .imgDiv2K {
+        margin: 0;
+    }
+    .imgDiv2K img {
+        width: 100%;
+    }
+    .imgDivFullLg {
+        margin: 6% 0 5% 0;
+    }
+    .imgDivFullLg img {
+        width: 100%;
     }
     .imgDivMd img {
         width: 70%;

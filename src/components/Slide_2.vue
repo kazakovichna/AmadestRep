@@ -48,6 +48,22 @@
                     </div>
                 </div>  
             </div>
+            <div class="row3IconLoop2"
+                :class="{row3IconLoopPh: scaleX < 768}"
+            >
+                <div class="row3IconLoopItem"
+                    :class="{row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
+                             row3IconLoopItemPl: scaleX >= 768 && scaleX < 1024,
+                             row3IconLoopItemPh: scaleX < 768}"
+                    v-for="item in FEVUschoolMas2"
+                    :key="item.photo"
+                >
+                    <img :src="require(`@/assets/Slide2/school/${item.photo}.png`)">
+                    <div class="itemText">
+                        {{item.name}}
+                    </div>
+                </div>  
+            </div>
         </div>
     </div>
 </template>
@@ -59,50 +75,53 @@ export default{
         back: null,
         FEVUschoolMas: [
             {
-                name: 'Политехнический институт',
-                photo: 'pi'
+                name: 'Юридическая школа',
+                photo: 'yur'
             },
             {
                 name: 'Восточный институт',
                 photo: 'srmi'
             },
             {
-                name: 'Школа экономики и менеджмента',
-                photo: 'sem'
+                name: 'Школа педагогики',
+                photo: 'sp'
             },
             {
                 name: 'Школа искусстви гуманитарных наук',
                 photo: 'sign'
             },
             {
-                name: 'Институт наукоемких технологий и передовых материалов',
-                photo: 'sen'
+                name: 'Школа экономики и менеджмента',
+                photo: 'sem'
             },
+            {
+                name: 'Школа медицины',
+                photo: 'med'
+            }
+        ],
+        FEVUschoolMas2: [
             {
                 name: 'Институт мирового океана',
                 photo: 'ocean'
             },
             {
-                name: 'Юридическая школа',
-                photo: 'yur'
+                name: 'Политехнический институт',
+                photo: 'pi'
             },
             {
                 name: 'Институт наук о жизни и биомедицины',
                 photo: 'bio'
             },
             {
-                name: 'Школа педагогики',
-                photo: 'sp'
-            },
-            {
                 name: 'Институт математикии компьютерных технологий',
                 photo: 'sce'
             },
             {
-                name: 'Школа медицины',
-                photo: 'med'
+                name: 'Институт наукоемких технологий и передовых материалов',
+                photo: 'sen'
             }
         ]
+
     }),
     computed: {
         // ...mapGetters([
@@ -160,7 +179,7 @@ export default{
         font-size: 20px;
     }
     .row2 {
-        margin-bottom: 2%;
+        margin-bottom: 4%;
         width: 60%;
         padding: 2% 3% 2% 3%;
         background-color: rgba(255, 255, 255, 0.75);
@@ -168,6 +187,7 @@ export default{
     }
     .row2Lg {
         font-size: 20px;
+        padding: 4% 3% 4% 3%;
     }
     .row2Md {
         font-size: 15px;
@@ -202,7 +222,7 @@ export default{
     .row3Head {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        margin-bottom: 2%;
+        margin: 0 0 6% 4%;
     }
     .row3HeadPl {
         font-size: 15px;
@@ -214,6 +234,13 @@ export default{
         font-size: 15px;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1%;
+    }
+    .row3IconLoop2 {
+        font-size: 15px;
+        margin-top: 7%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 1%;
     }
     .row3IconLoopPh {

@@ -9,7 +9,7 @@
             ПРОГРАММЫ ПРАКТИК И СТАЖИРОВОК ДЛЯ СТУДЕНТОВ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440,
+            :class="{row2Lg: scaleX >= 1440 && scaleX < 2000,
                      row2Md: scaleX >= 1024 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX < 1024,
                      row2Ph: scaleX < 768 }"
@@ -24,14 +24,16 @@
             </div>
         </div>
         <div class="row3"
-            :class="{row3Pl: scaleX >= 768 && scaleX < 1024,
+            :class="{row3Lg: scaleX >= 1440 && scaleX < 2000,
+                     row3Pl: scaleX >= 768 && scaleX < 1024,
                      row3Ph: scaleX < 768}"
         >
             <div class="row3IconLoop"
                 :class="{row3IconLoopPh: scaleX <= 425}"
             >
                 <div class="row3IconLoopItem"
-                    :class="{row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
+                    :class="{row3IconLoopItemLg: scaleX >= 1440 && scaleX < 2000,
+                             row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
                              row3IconLoopItemPl: scaleX > 425 && scaleX < 1024,
                              row3IconLoopItemPh: scaleX <= 425}"
                     v-for="item in FEVUschoolMas"
@@ -159,6 +161,7 @@ export default{
     }
     .row2Lg {
         font-size: 20px;
+        padding: 3% 2% 3% 4%;
     }
     .row2Md {
         font-size: 15px;
@@ -215,6 +218,15 @@ export default{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+    .row3IconLoopItemLg {
+        margin-top: 15%;
+    }
+    .row3IconLoopItemLg img {
+        width: 75px;
+    }
+    .row3IconLoopItemLg div .textText {
+        font-size: 12px;
     }
     .row3IconLoopItemMd img {
         width: 30%;

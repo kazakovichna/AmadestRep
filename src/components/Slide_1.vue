@@ -41,75 +41,81 @@
                 </div>
             </div>
         </div>
-        <div class="body"
-            :class="{bodyGridPc: scaleX >= 768,
-                     bodyGridPh: scaleX < 768}"
+        <div class="bodyDiv"
+            :class="{bodyDivSm: scaleY < 1024}"
         >
-            <div class="mainName"
-                :class="{mainNameFullLg: scaleX >= 1440,
-                         mainNameLg: scaleX < 1440 && scaleX >= 1024,
-                         mainNameMd: scaleX >= 768 && scaleX < 1024,
-                         mainNameSm: scaleX < 768}"
+            <div class="body"
+                :class="{bodyGridPc: scaleX >= 768,
+                        bodyGridPh: scaleX < 768}"
             >
-                ДВФУ
-            </div>
-            <div class="descrFrst"
-                :class="{descrFrstFullLg: scaleX >= 1440,
-                         descrFrstLg: scaleX >= 1024 && scaleX < 1440 ,
-                         descrFrstMd: (scaleX >= 768 && scaleX < 1024),
-                         descrFrstSm: scaleX < 768}"
-            >
-                <div class="one2"
-                    :class="{one2Lg: scaleX >= 1024 && scaleX < 1440,
-                             one2Md: scaleX >= 768 && scaleX < 1024}"
-                    v-if="scaleX >= 768">
-                    НИВЕРСИТЕТ-
-                </div>
-                <div class="one2 one3"  
-                    v-else>
-                    УНИВЕРСИТЕТ-
-                </div>
-                <div class="two2"
-                    :class="{two2Lg: scaleX >= 1024 && scaleX < 1440,
-                             two2Md: scaleX >= 768 && scaleX < 1024}"
+                <div class="mainName"
+                    :class="{mainNameFullLg: scaleX >= 1440,
+                            mainNameLg: scaleX < 1440 && scaleX >= 1024,
+                            mainNameMd: scaleX >= 768 && scaleX < 1024,
+                            mainNameSm: scaleX < 768}"
                 >
-                    ЭТО ЛУЧШЕЕ МЕСТО ЧТОБЫ СОЗДАВАТЬ <br> БУДУЩЕЕ ПРИСОЕДИНЯЙСЯ К НАМ!
+                    ДВФУ
+                </div>
+                <div class="descrFrst"
+                    :class="{descrFrst2K: scaleX >= 1600,
+                            descrFrstFullLg: scaleX >= 1440 && scaleX < 1600,
+                            descrFrstLg: scaleX >= 1024 && scaleX < 1440 ,
+                            descrFrstMd: (scaleX >= 768 && scaleX < 1024),
+                            descrFrstSm: scaleX < 768}"
+                >
+                    <div class="one2"
+                        :class="{one2Lg: scaleX >= 1024 && scaleX < 1440,
+                                 one2Md: scaleX >= 768 && scaleX < 1024}"
+                        v-if="scaleX >= 768">
+                        НИВЕРСИТЕТ-
+                    </div>
+                    <div class="one2 one3"  
+                        v-else>
+                        УНИВЕРСИТЕТ-
+                    </div>
+                    <div class="two2"
+                        :class="{two2Lg: scaleX >= 1024 && scaleX < 1440,
+                                 two2Md: scaleX >= 768 && scaleX < 1024}"
+                    >
+                        ЭТО ЛУЧШЕЕ МЕСТО ЧТОБЫ СОЗДАВАТЬ <br> БУДУЩЕЕ ПРИСОЕДИНЯЙСЯ К НАМ!
+                    </div>
+                </div>
+            </div>
+            <div class="body2"
+                :class="{body2Lg: scaleX >= 768,
+                         body2Sm: scaleX < 768}"
+            >
+                <div class="descrSec"
+                    :class="{descrSecFullLg: scaleX >= 1440,
+                            descrSecLg: scaleX >= 1024 && scaleX < 1440,
+                            descrSeсMd: scaleX >= 768 && scaleX < 1024,
+                            descrSecSm: scaleX < 768}"
+                >
+                    <div>
+                        МЫ КОНЦЕНТРИРУЕМ ЛУЧШИЕ <br>
+                    ИНТЕЛЛЕКТУАЛЬНЫЕ СИЛЫ НАШЕЙ СТРАНЫ, <br>
+                    ГОТОВИМ КАДРЫ ДЛЯ НОВОЙ ЭКОНОМИКИ, <br>
+                    ЗАПУСКАЕМ ОБРАЗОВАТЕЛЬНЫЕ <br>
+                    ПРОГРАММЫ В ИНТЕРЕСАХ РАБОТОДАТЕЛЕЙ.
+                    </div>
+                </div>
+                <div class="descrTrd"
+                    :class="{descrTrdFullLg: scaleX >= 1440,
+                            descrTrdLg: scaleX >= 1024 && scaleX < 1440,
+                            descrTrdMd: scaleX >= 768 && scaleX < 1024,
+                            descrSecSm: scaleX < 768}"
+                >
+                    <div>
+                        ВМЕСТЕ С ПАРТНЕРАМИ МЫ ОТВЕЧАЕМ <br>
+                    НА ГЛОБАЛЬНЫЕ ВЫЗОВЫ, <br>
+                    СТРЕМИМСЯ БЫТЬ ЗАМЕТНЫМИ <br>
+                    В МИРОВОМ МАСШТАБЕ, <br>
+                    РАЗВИВАЕМ НАУКУ И ОБРАЗОВАНИЕ.    
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="body2"
-            :class="{body2Lg: scaleX >= 768,
-                     body2Sm: scaleX < 768}"
-        >
-            <div class="descrSec"
-                :class="{descrSecFullLg: scaleX >= 1440,
-                         descrSecLg: scaleX >= 1024 && scaleX < 1440,
-                         descrSeсMd: scaleX >= 768 && scaleX < 1024,
-                         descrSecSm: scaleX < 768}"
-            >
-                <div>
-                    МЫ КОНЦЕНТРИРУЕМ ЛУЧШИЕ
-                ИНТЕЛЛЕКТУАЛЬНЫЕ СИЛЫ НАШЕЙ СТРАНЫ,
-                ГОТОВИМ КАДРЫ ДЛЯ НОВОЙ ЭКОНОМИКИ,
-                ЗАПУСКАЕМ ОБРАЗОВАТЕЛЬНЫЕ <br>
-                ПРОГРАММЫ В ИНТЕРЕСАХ РАБОТОДАТЕЛЕЙ.
-                </div>
-            </div>
-            <div class="descrTrd"
-                :class="{descrTrdFullLg: scaleX >= 1440,
-                         descrTrdLg: scaleX >= 1024 && scaleX < 1440,
-                         descrTrdMd: scaleX >= 768 && scaleX < 1024,
-                         descrSecSm: scaleX < 768}"
-            >
-                <div>
-                    ВМЕСТЕ С ПАРТНЕРАМИ МЫ ОТВЕЧАЕМ <br>
-                НА ГЛОБАЛЬНЫЕ ВЫЗОВЫ, <br>
-                СТРЕМИМСЯ БЫТЬ ЗАМЕТНЫМИ <br>
-                В МИРОВОМ МАСШТАБЕ, <br>
-                РАЗВИВАЕМ НАУКУ И ОБРАЗОВАНИЕ.    
-                </div>
-            </div>
-        </div>
+        
     </div>
 </template>
 
@@ -118,7 +124,9 @@
 
 export default {
     data: () => ({
-        back: null
+        back: null,
+        bodyDivH: null,
+        header: null
     }),
     computed: {
         // ...mapGetters([
@@ -132,11 +140,17 @@ export default {
     methods: {
         set_scale () {
             this.back.style.height = `${this.scaleY}px`
+            // console.log(this.back.style.height)
+            // this.header = document.querySelector('.header').offsetHeight
+            // console.log(this.header)
+            // this.bodyDivH.style.height = `${this.scaleY - this.header.style.height}px`
         }
     },
     mounted() {
         this.back = document.querySelector('.main1')
-        this.back.style.height = `${this.scaleY}px`
+        // this.bodyDivH = document.querySelector('.bodyDiv')
+
+        this.set_scale()
         
         window.addEventListener('resize', this.set_scale)
     }
@@ -155,6 +169,7 @@ export default {
         align-items: center;
     }
     .header {
+        height: 10%;
         margin: 2% 0 2% 4%;
         display: flex;
         flex-direction: row;
@@ -196,8 +211,27 @@ export default {
         font-size: 1em;
     }
 
+    .bodyDiv {
+        height: 80%;
+        margin-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .bodyDivSm {
+        height: 80%;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
     /* Настройка адаптива боди */
     .body {
+        height: 50%;
         width: 100%;
         margin: 1% 1% 0 1%;
         display: grid;
@@ -206,7 +240,7 @@ export default {
     }
     .bodyGridPc {
         grid-template-columns: 1fr 1fr;
-        /* margin-left: 10%; */
+        /* margin-top: 10%; */
     }
     .bodyGridPh {
         grid-template-rows: 1fr 1fr;
@@ -220,9 +254,9 @@ export default {
     .mainNameFullLg {
         z-index: 2;
         position: relative;
-        left: 18%;
+        left: 15%; 
         text-align: right;
-        font-size: 220px;
+        font-size: 225px;
     }
     .mainNameLg {
         z-index: 2;
@@ -245,8 +279,15 @@ export default {
     .descrFrst {
         display: flex;
     }
+    .descrFrst2K {
+        padding: 0 0 6% 16%;
+        background-color: rgba(0, 0, 0, 0.35);
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
     .descrFrstFullLg {
-        padding: 0 0 10% 18%;
+        padding: 0 0 14% 18%;
         background-color: rgba(0, 0, 0, 0.35);
         flex-direction: column;
         justify-content: flex-end;
@@ -275,7 +316,7 @@ export default {
         text-align: center;
     }
     .one2 {
-        font-size: 48px;
+        font-size: 52px;
         font-weight: 700;
         opacity: 75%;
     }
@@ -291,6 +332,7 @@ export default {
     }
     .two2 {
         width: 70%;
+        font-size: 18px;
     }
     .two2Lg {
         font-size: 14px;
@@ -302,6 +344,7 @@ export default {
         font-weight: 400;
     }
     .body2 {
+        height: 50%;
         color: white;
         display: grid;
         font-family: 'Roboto', sans-serif;
@@ -324,29 +367,24 @@ export default {
         padding: 10%;
         background-color: rgba(0, 0, 0, 0.4);
     }
-    .descrSec {
-        font-weight: 500;
-        text-align: right;
-    }
     .descrTrd {
+        height: 100%;
         width: 50%;
         font-weight: 500;
         text-align: left;
     }
     .descrTrdFullLg {
         width: 100%;
-        height: 1080px;
         display: flex;
+        font-size: 22px;
         justify-content: flex-start;
     }
     .descrTrdFullLg div {
-        margin: 5%;
-        width: 400px;
+        margin: 10% 0 0 5%;
         height: 90px;
     }
     .descrTrdLg {
         width: 100%;
-        height: 1080px;
         display: flex;
         justify-content: flex-start;
     }
@@ -366,24 +404,30 @@ export default {
         width: 350px;
         height: 90px;
     }
+    .descrSec {
+        height: 100%;
+        font-weight: 500;
+        text-align: right;
+    }
     .descrSecSm {
         width: 90%;
     }
     .descrSecFullLg {
         width: 100%;
-        height: 1080px;
+
+        height: 100%;
         display: flex;
         justify-content: flex-end;
+        font-size: 22px;
         background-color: rgba(0, 0, 0, 0.4);
     }
     .descrSecFullLg div { 
-        margin: 5%;
-        width: 400px;
+        margin: 10% 5% 0 0;
+        /* width: 400px; */
         height: 90px;
     }
     .descrSecLg {
         width: 100%;
-        height: 1080px;
         display: flex;
         justify-content: flex-end;
         background-color: rgba(0, 0, 0, 0.4);
@@ -395,7 +439,6 @@ export default {
     }
     .descrSeсMd {
         width: 100%;
-        height: 1080px;
         display: flex;
         justify-content: flex-end;
         background-color: rgba(0, 0, 0, 0.4);
