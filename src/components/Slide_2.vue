@@ -9,7 +9,8 @@
             ИНВЕСТИЦИИ В ОБРАЗОВАНИЕ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440,
+            :class="{row2Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                     row2LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row2Md: scaleX >= 1024 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX < 1024,
                      row2Ph: scaleX < 768 }"
@@ -24,6 +25,7 @@
         </div>
         <div class="row3"
             :class="{row3Pl: scaleX >= 768 && scaleX < 1024,
+                     row3LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row3Ph: scaleX < 768}"
         >
             <div class="row3Head"
@@ -49,7 +51,8 @@
                 </div>  
             </div>
             <div class="row3IconLoop2"
-                :class="{row3IconLoopPh: scaleX < 768}"
+                :class="{row3IconLoopLgSm: scaleY < 1024,
+                         row3IconLoopPh: scaleX < 768}"
             >
                 <div class="row3IconLoopItem"
                     :class="{row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
@@ -189,6 +192,11 @@ export default{
         font-size: 20px;
         padding: 4% 3% 4% 3%;
     }
+    .row2LgSm {
+        font-size: 20px;
+        padding: 2% 3% 2% 3%;
+        margin-bottom: 2%;
+    }
     .row2Md {
         font-size: 15px;
         padding: 2% 3% 2% 3%;
@@ -219,6 +227,12 @@ export default{
     .row3Ph {
         width: 85%;
     }
+    .row3LgSm {
+        padding: 1% 3% 1% 3%;
+    }
+    .row3LgSm .row3Head {
+        margin: 0 0 2% 4%;
+    }
     .row3Head {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
@@ -242,6 +256,9 @@ export default{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 1%;
+    }
+    .row3IconLoopLgSm {
+        margin-top: 2%;
     }
     .row3IconLoopPh {
         grid-template-columns: repeat(3, 1fr);

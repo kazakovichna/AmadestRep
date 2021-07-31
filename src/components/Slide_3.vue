@@ -9,7 +9,8 @@
             ИНВЕСТИЦИИ В ОБРАЗОВАНИЕ
         </div>
         <div class="row3"
-            :class="{row3Pl: scaleX >= 768 && scaleX < 1024,
+            :class="{row3LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                     row3Pl: scaleX >= 768 && scaleX < 1024,
                      row3Ph: scaleX < 768}"
         >
             <div class="row3Head"
@@ -22,7 +23,8 @@
             </div>
             <div class="imgDiv"
                 :class="{imgDiv2K: scaleX >= 2000,
-                         imgDivFullLg: scaleX >= 1440 && scaleX < 2000,
+                         imgDivFullLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                         imgDivFullLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                          imgDivLg: scaleX >= 1370 && scaleX < 1440,
                          imgDivMd: scaleX > 768 && scaleX < 1370 && scaleY < 640,
                          imgDivPl: scaleX > 425 && scaleX <= 768,
@@ -101,6 +103,12 @@ export default{
     .row3Ph {
         width: 85%;
     }
+    .row3LgSm {
+        padding: 2% 3% 0 3%;
+    }
+    .row3LgSm .row3Head {
+        margin-bottom: 0;
+    }
     .row3Head {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
@@ -129,6 +137,12 @@ export default{
     }
     .imgDivFullLg img {
         width: 100%;
+    }
+    .imgDivFullLgSm {
+        margin: 2% 0 0 0;
+    }
+    .imgDivFullLgSm img {
+        width: 80%;
     }
     .imgDivMd img {
         width: 70%;

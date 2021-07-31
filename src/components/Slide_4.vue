@@ -2,6 +2,7 @@
     <div class="main4">
         <div class="row1"
             :class="{row1Lg: scaleX >= 1440,
+                     row1LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row1Md: scaleX >= 1024 && scaleX < 1440,
                      row1Pl: scaleX >= 768 && scaleX < 1024,
                      row1Ph: scaleX < 768}"
@@ -16,21 +17,22 @@
         >
             <!-- FirstLoopImg -->
             <div class="row3IconLoop"
+                :class="{row3IconLoopLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024}"
             >
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/mgimo.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/1.png`)">
                 </div>
 
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/hse.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/2.png`)">
                 </div>
 
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/umgc.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/3.png`)">
                 </div>
 
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/queensland.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/4.png`)">
                 </div>
             <!-- </div>
             
@@ -77,11 +79,11 @@
             <div class="row3LoopPh">
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/mgimo.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/1.png`)">
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/hse.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/2.png`)">
                 </div>
 
                 <div class="row3IconText"
@@ -101,11 +103,11 @@
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/umgc.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/3.png`)">
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/queensland.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/4.png`)">
                 </div>
 
                 <div class="row3IconText"
@@ -128,6 +130,7 @@
         <!-- Second Row Begin -->
         <div class="row1"
             :class="{row1Lg: scaleX >= 1440,
+                     row1LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row1Md: scaleX >= 1024 && scaleX < 1440,
                      row1Pl: scaleX >= 768 && scaleX < 1024,
                      row1Ph: scaleX < 768}"
@@ -141,18 +144,20 @@
             v-if="scaleX > 768"
         >
             <!-- SecondLoopImg -->
-            <div class="row3IconLoop">
+            <div class="row3IconLoop"
+                :class="{row3IconLoopLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024}"
+            >
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/rosneft.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/5.png`)">
                 </div>
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/nipigaz.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/6.png`)">
                 </div>
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/sberbank.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/7.png`)">
                 </div>
                 <div class="row3IconItem">
-                    <img :src="require(`@/assets/Slide4/partners/sibur.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/8.png`)">
                 </div>
             <!-- </div>
            
@@ -200,11 +205,11 @@
             <div class="row3LoopPh">
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/rosneft.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/5.png`)">
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/nipigaz.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/6.png`)">
                 </div>
 
                 <div class="row3IconText"
@@ -225,11 +230,11 @@
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/sberbank.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/7.png`)">
                 </div>
 
                 <div class="row3IconItemPh">
-                    <img :src="require(`@/assets/Slide4/partners/sibur.png`)">
+                    <img :src="require(`@/assets/Slide4/2-2/8.png`)">
                 </div>
 
                 <div class="row3IconText"
@@ -302,6 +307,9 @@ export default{
     .row1Lg {
         font-size: 40px;
     }
+    .row1LgSm {
+        font-size: 30px;
+    }
     .row1Md {
         font-size: 20px;
     }
@@ -316,7 +324,7 @@ export default{
     .row3 {
         width: 60%;
         background-color: rgba(255, 255, 255, 0.75);
-        padding: 3% 3% 3% 3%;
+        padding: 0 3% 4% 3%;
     }
     .row3Pl {
         width: 80%;
@@ -327,9 +335,14 @@ export default{
     .row3IconLoop {
         font-size: 15px;
         display: grid;
-        grid-template-columns: 0.8fr 0.8fr 1.7fr 1.7fr;
-        grid-gap: 10%;
-        margin-bottom: 4%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-gap: 10%; */
+    }
+    .row3IconLoopLgSm .row3IconItem img {
+        width: 130px;
+    }
+    .row3IconLoopLgSm .row3IconText {
+        font-size: 12px;
     }
     .row3IconLoopPh {
         display: grid;
@@ -339,11 +352,12 @@ export default{
     }
     .row3IconLoopText {
         display: grid;
-        grid-template-columns: 0.8fr 0.8fr 1.7fr 1.7fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 10%;
         align-items: flex-start;
     }
     .row3IconItem {
+        width: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;

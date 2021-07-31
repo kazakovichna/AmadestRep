@@ -39,7 +39,9 @@
                         row3IconLoopPh: scaleX <= 768}"
             >
                 <div class="row3IconLoopItem"
-                    :class="{row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
+                    :class="{row3IconLoopItemLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                             row3IconLoopItemLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                             row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
                              row3IconLoopItemPl: scaleX >= 768 && scaleX < 1024,
                              row3IconLoopItemPh: scaleX < 768}"
                     v-for="item in FEVUschoolMas"
@@ -217,6 +219,15 @@ export default{
     }
     .row3IconLoopItem img {
         width: 80%;
+    }
+    .row3IconLoopItemLg {
+        width: 100%;
+    }
+    .row3IconLoopItemLg img{
+        margin-top: 25%;
+    }
+    .row3IconLoopItemLgSm img {
+        margin-top: 5%;
     }
     .row3IconLoopItemMd img {
         width: 70%;

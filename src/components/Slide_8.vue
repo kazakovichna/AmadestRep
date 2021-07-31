@@ -27,13 +27,64 @@
             :class="{row3Pl: scaleX >= 768 && scaleX <= 1240,
                      row3Ph: scaleX < 768}"
         >
-            <div class="row3IconLoop"
-                :class="{row3IconLoopLg: scaleX < 1380 && scaleX > 1024,
-                         row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
-                         row3IconLoopPl: scaleX > 425 && scaleX < 768}"
+            <div class="row3Img"
+                :class="{row3ImgLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                         row3ImgLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                         row3ImgMd: scaleX < 1440 && scaleX >= 1024,
+                         row3ImgPl: scaleX < 1024 && scaleX >= 768,
+                         row3ImgPh: scaleX < 768 && scaleX > 425}"
             >
-                <img v-if="scaleX > 425" :src="require('@/assets/Slide8/Group21.svg')">
-                <img v-if="scaleX <= 425" :src="require('@/assets/Slide8/Group22.svg')">
+                <div class="row_1">
+                        <div class="row2NameDiv">
+                            <img :src="require('@/assets/Slide8/Tal1.png')" alt="">
+                            <div>
+                                ОБЩЕЕ ОБРАЗОВАНИЕ
+                            </div>
+                        </div>
+                        <div class="row2Loop2">
+                            <div class="row2LoopItem1"
+                                v-for="item in Mas1"
+                                :key="item.num"
+                            >
+                                <img :src="require(`@/assets/Slide8/1/1.png`)" alt="">
+                                <div class="text">
+                                    {{item.name}}
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="row_2">
+                        <div class="row2NameDiv">
+                            <img :src="require('@/assets/Slide8/Tal2.png')" alt="">
+                            <div>
+                                ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ
+                            </div>
+                        </div>
+                        <div class="row2Loop">
+                            <div class="row2LoopItem"
+                                v-for="item in Mas2"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide8/2/${item}.png`)" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="row_3">
+                        <div class="row2NameDiv">
+                            <img :src="require('@/assets/Slide8/Tal3.png')" alt="">
+                            <div>
+                                ОЛИМПИАДЫ И КОНКУРСЫ
+                            </div>
+                        </div>
+                        <div class="row2Loop3">
+                            <div class="row2LoopItem"
+                                v-for="item in Mas3"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide8/3/${item}.png`)" alt="">
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,13 +94,24 @@
 
 export default{
  data: () => ({
-        back: null
+        back: null,
+        Mas1: [
+            {
+                num: 1,
+                name: "Университетская школа"
+            }, 
+            {
+                num: 2,
+                name: "Университетский комплекс «Гимназия-колледж»"
+            }, 
+            {
+                num: 3,
+                name: "Гимназия ДВФУ"
+            }
+            ],
+        Mas2: [1, 2, 3, 4, 5, 6],
+        Mas3: [1, 2, 3, 4, 5]
     }),
-    computed: {
-        // ...mapGetters([
-        //      'GET_SCALE_Y'
-        // ])
-    },
     props: {
         scaleX: Number,
         scaleY: Number
@@ -139,18 +201,75 @@ export default{
     .row3Ph {
         width: 85%;
     }
-    .row3IconLoopLg img {
-        width: 80%;
+    .row3Img {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .row3IconLoopMd img {
-        width: 90%;
+    .row_1, .row_2, .row_3 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .row3IconLoopPl img {
-        width: 90%;
+    .row2NameDiv {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .itemText {
-        margin-top: 5%;
+    .row2NameDiv div {
+        margin-left: 10%;
+        width: 160px;
+        
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+    }
+    .row2Loop {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: 70%;
+        margin-left: 10%;
+    }
+    .row2Loop div img {
+        width: 110%;
+    }
+    .row2Loop3 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 70%;
+        margin-left: 10%;
+        grid-gap: 5%;
+    }
+    .row2Loop3 div img {
+        width: 140%;
+    }
+    .row2Loop2 {
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
+        grid-gap: 5%;
+    }
+    .row2LoopItem img {
+        width: 100%;
+    }
+    .row2LoopItem1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+    }
+    .row2LoopItem1 img {
+        width: 48px;
+    }
+    .row2LoopItem1 div {
+        width: 155px;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+    }
+    .row2LoopItem2 {
+
     }
 </style>

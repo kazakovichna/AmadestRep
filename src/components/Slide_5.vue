@@ -9,7 +9,8 @@
             ПРОГРАММЫ ПРАКТИК И СТАЖИРОВОК ДЛЯ СТУДЕНТОВ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440 && scaleX < 2000,
+            :class="{row2LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024, 
+                     row2Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
                      row2Md: scaleX >= 1024 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX < 1024,
                      row2Ph: scaleX < 768 }"
@@ -24,7 +25,8 @@
             </div>
         </div>
         <div class="row3"
-            :class="{row3Lg: scaleX >= 1440 && scaleX < 2000,
+            :class="{row3LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                     row3Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
                      row3Pl: scaleX >= 768 && scaleX < 1024,
                      row3Ph: scaleX < 768}"
         >
@@ -32,7 +34,8 @@
                 :class="{row3IconLoopPh: scaleX <= 425}"
             >
                 <div class="row3IconLoopItem"
-                    :class="{row3IconLoopItemLg: scaleX >= 1440 && scaleX < 2000,
+                    :class="{row3IconLoopItemLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                             row3IconLoopItemLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                              row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
                              row3IconLoopItemPl: scaleX > 425 && scaleX < 1024,
                              row3IconLoopItemPh: scaleX <= 425}"
@@ -159,6 +162,11 @@ export default{
         background-color: rgba(255, 255, 255, 0.75);
         font-family: 'Roboto', sans-serif;
     }
+    .row2LgSm {
+        font-size: 20px;
+        padding: 2% 2% 2% 4%;
+        margin-bottom: 1%;
+    }
     .row2Lg {
         font-size: 20px;
         padding: 3% 2% 3% 4%;
@@ -186,6 +194,9 @@ export default{
         width: 60%;
         background-color: rgba(255, 255, 255, 0.75);
         padding: 3%;
+    }
+    .row3LgSm {
+        padding: 0 3% 2% 3%;
     }
     .row3Pl {
         width: 80%;
@@ -227,6 +238,15 @@ export default{
     }
     .row3IconLoopItemLg div .textText {
         font-size: 12px;
+    }
+    .row3IconLoopItemLgSm {
+        margin-top: 5%;
+    }
+    .row3IconLoopItemLgSm img {
+        width: 60px;
+    }
+    .row3IconLoopItemLgSm div .textText {
+        font-size: 10px;
     }
     .row3IconLoopItemMd img {
         width: 30%;

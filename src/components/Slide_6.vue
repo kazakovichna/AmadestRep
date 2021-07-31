@@ -13,12 +13,70 @@
                      row3Ph: scaleX < 768}"
         >
             <div class="row3Img"
-                :class="{row3ImgMd: scaleX < 1380 && scaleX >= 1024,
+                :class="{row3ImgLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                         row3ImgLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                         row3ImgMd: scaleX < 1440 && scaleX >= 1024,
                          row3ImgPl: scaleX < 1024 && scaleX >= 768,
                          row3ImgPh: scaleX < 768 && scaleX > 425}"
             >
-                <img :src="require('../assets/Slide6/Group7.svg')" v-if="scaleX > 425">
-                <img :src="require('../assets/Slide6/Group20.svg')" v-else>
+                <div class="row2">
+                    <div class="row2row1">
+                        <div class="row2NameDiv">
+                            <img :src="require('@/assets/Slide6/Fond.png')" alt="">
+                            <div>
+                                ОТРАСЛЕВЫЕ КОМПАНИИ
+                            </div>
+                        </div>
+                        <div class="row2Loop">
+                            <div class="row2LoopItem"
+                                v-for="item in Mas1"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide6/1/${item}.png`)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2Loop2">
+                        <div class="row2LoopItem"
+                                v-for="item in Mas1"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide6/4/${item}.png`)" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row2row1">
+                        <div class="row2NameDiv">
+                            <img :src="require(`@/assets/Slide6/Fond2.png`)" alt="">                            
+                            <div class="row2Name">ФОНДЫ</div>
+                        </div>
+                        <div class="row2Loop">
+                            <div class="row2LoopItem"
+                                v-for="item in Mas1"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide6/2/${item}.png`)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row4">
+                    <div class="row2row1">
+                        <div class="row2NameDiv">
+                            <img :src="require(`@/assets/Slide6/Fond3.png`)" alt="">
+                            <div class="row2Name">БАНКИ</div>
+                        </div>
+                        <div class="row2Loop3">
+                            <div class="row2LoopItem"
+                                v-for="item in Mas2"
+                                :key="item"
+                            >
+                                <img :src="require(`@/assets/Slide6/3/${item}.png`)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,52 +87,8 @@
 export default{
  data: () => ({
         back: null,
-        FEVUschoolMas: [
-            {
-                name: 'Политехнический институт',
-                photo: 'pi'
-            },
-            {
-                name: 'Восточный институт',
-                photo: 'srmi'
-            },
-            {
-                name: 'Школа экономики и менеджмента',
-                photo: 'sem'
-            },
-            {
-                name: 'Школа искусстви гуманитарных наук',
-                photo: 'sign'
-            },
-            {
-                name: 'Институт наукоемких технологий и передовых материалов',
-                photo: 'sen'
-            },
-            {
-                name: 'Институт мирового океана',
-                photo: 'ocean'
-            },
-            {
-                name: 'Юридическая школа',
-                photo: 'yur'
-            },
-            {
-                name: 'Институт наук о жизни и биомедицины',
-                photo: 'bio'
-            },
-            {
-                name: 'Школа педагогики',
-                photo: 'sp'
-            },
-            {
-                name: 'Институт математикии компьютерных технологий',
-                photo: 'sce'
-            },
-            {
-                name: 'Школа медицины',
-                photo: 'med'
-            }
-        ]
+        Mas1: [1, 2, 3, 4],
+        Mas2: [1, 2, 3]
     }),
     computed: {
         // ...mapGetters([
@@ -134,7 +148,7 @@ export default{
     .row3 {
         width: 60%;
         background-color: rgba(255, 255, 255, 0.75);
-        padding: 3%;
+        padding: 0 3% 3% 3%;
     }
     .row3Pl {
         width: 80%;
@@ -142,13 +156,66 @@ export default{
     .row3Ph {
         width: 85%;
     }
-    .row3ImgMd img {
-        width: 75%;
+    .row3Img {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .row3ImgPl img {
-        width: 75%;
+    .row2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .row3ImgPh img {
-        width: 110%;
+    .row2row1 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .row2NameDiv {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .row2NameDiv div {
+        margin-left: 10%;
+        width: 160px;
+        
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+    }
+    .row2Loop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .row2LoopItem img {
+        width: 100%;
+    }
+    .row2Loop2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .row2Loop2 .row2LoopItem {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100px;
+        width: 100%;
+    }
+    .row2Loop2 .row2LoopItem img {
+        width: 90%;
+        position: relative;
+        bottom: 50%;
+        overflow: hidden;
+    }
+    .row {
+        margin-top: 5%;
+    }
+    .row2Loop3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 </style>
