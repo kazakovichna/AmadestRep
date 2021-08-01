@@ -9,7 +9,8 @@
             НАУЧНО-ИССЛЕДОВАТЕЛЬСКАЯ ДЕЯТЕЛЬНОСТЬ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440,
+            :class="{row2Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                     row2LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row2Md: scaleX > 1240 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX <= 1240,
                      row2Ph: scaleX < 768 }"
@@ -25,16 +26,26 @@
             </div>
         </div>
         <div class="row3"
-            :class="{row3Pl: scaleX >= 768 && scaleX <= 1240,
+            :class="{row3Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                     row3LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                     row3Pl: scaleX >= 768 && scaleX <= 1240,
                      row3Ph: scaleX < 768}"
         >
             <div class="row3IconLoop"
-                :class="{row3IconLoopLg: scaleX < 1380 && scaleX > 1024,
+                :class="{row3IconLoopLg: scaleX >= 1440 && scaleX < 2000,
                          row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
-                         row3IconLoopPl: scaleX > 425 && scaleX < 768}"
+                         row3IconLoopPl: scaleX < 768 }"
             >
-                <img v-if="scaleX > 425" :src="require('@/assets/Slide10/Group23.svg')">
-                <img v-if="scaleX <= 425" :src="require('@/assets/Slide10/Group24.svg')">
+                <div class="row3IconLoopItem"
+                    v-for="item in Mas"
+                    :key="item.pcj"
+                >
+                    <img :src="require(`@/assets/Slide10/${item.pcj}.png`)" alt="">
+                    <div class="textBlock">
+                        <div class="numDiv">{{item.num}}</div>
+                        <div class="textDiv">{{item.name}}</div>
+                    </div>
+                </div>   
             </div>
         </div>
     </div>
@@ -44,7 +55,39 @@
 
 export default{
  data: () => ({
-        back: null
+        back: null,
+        Mas: [
+            {
+                num: "240+",
+                pcj: 1,
+                name: "Изобретений и полезных моделей"
+            },
+            {
+                num: "400+",
+                pcj: 2,
+                name: "Патентов и свидетельств"
+            },
+            {
+                num: "1700+",
+                pcj: 3,
+                name: "Преподавателей и ученых"
+            },
+            {
+                num: "4000+",
+                pcj: 4,
+                name: "Научных статей в год"
+            },
+            {
+                num: "370",
+                pcj: 5,
+                name: "Научных лабораторий"
+            },
+            {
+                num: "200+",
+                pcj: 6,
+                name: "Приглашенных международных экспертов в год"
+            }
+        ]
     }),
     computed: {
         // ...mapGetters([
@@ -109,6 +152,11 @@ export default{
     }
     .row2Lg {
         font-size: 20px;
+        padding: 3% 3% 3% 3%;
+    }
+    .row2LgSm {
+        font-size: 20px;
+        padding: 2% 3% 2% 3%;
     }
     .row2Md {
         font-size: 15px;
@@ -134,24 +182,50 @@ export default{
         background-color: rgba(255, 255, 255, 0.75);
         padding: 3%;
     }
+    .row3Lg {
+        padding: 3% 3% 6% 3%;
+    }
+    .row3LgSm {
+        padding: 3% 3% 3% 3%;
+    }   
     .row3Pl {
         width: 80%;
     }
     .row3Ph {
         width: 85%;
     }
-    .row3IconLoopLg img {
-        width: 60%;
+    .row3IconLoop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
     .row3IconLoopMd img {
         width: 90%;
     }
-    .row3IconLoopPl img {
-        width: 90%;
+    .row3IconLoopPl {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .itemText {
-        margin-top: 5%;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+    .row3IconLoopItem {
+        margin-top: 10%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .row3IconLoopItem img {
+        width: 53px;
+    }
+    .textBlock {
+        margin-left: 10%;
+    }
+    .textDiv {
+        font-size: 15px;
+        font-family: "Roboto", sans-serif;
+        width: 140px;
+        color: #122352;
+    }
+    .numDiv {
+        font-size: 35px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        color: #122352;
     }
 </style>
