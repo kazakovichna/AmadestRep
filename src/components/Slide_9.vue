@@ -9,7 +9,8 @@
             ИНВЕСТИЦИИ В НАУКУ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440,
+            :class="{row2Lg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                     row2LgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                      row2Md: scaleX >= 1024 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX < 1024,
                      row2Ph: scaleX < 768 }"
@@ -31,11 +32,14 @@
                 ПРИОРИТЕТНЫЕ НАПРАВЛЕНИЯ
             </div>
             <div class="row3IconLoop"
-                :class="{row3IconLoopPh: scaleX < 768 && scaleX > 425,
+                :class="{row3IconLoopLg: scaleX >= 768 && scaleX > 2000 && scaleY < 1024,
+                         row3IconLoopPh: scaleX < 768 && scaleX > 425,
                          row3IconLoopPh1: scaleX <= 425}"
             >
                 <div class="row3IconLoopItem"
-                    :class="{row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
+                    :class="{row3IconLoopItemLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                             row3IconLoopItemLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
+                             row3IconLoopItemMd: scaleX >= 1024 && scaleX < 1440,
                              row3IconLoopItemPl: scaleX >= 768 && scaleX < 1024,
                              row3IconLoopItemPh: scaleX < 768 && scaleX > 425,
                              row3IconLoopItemPh1: scaleX <= 425}"
@@ -147,6 +151,11 @@ export default{
     }
     .row2Lg {
         font-size: 20px;
+        padding: 3% 3% 3% 3%;
+    }
+    .row2LgSm {
+        font-size: 20px;
+        padding: 2% 3% 2% 3%;
     }
     .row2Md {
         font-size: 15px;
@@ -181,7 +190,6 @@ export default{
     .row3Head {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        margin-bottom: 2%;
     }
     .row3HeadPl {
         font-size: 15px;
@@ -192,8 +200,12 @@ export default{
     .row3IconLoop {
         font-size: 15px;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 1%;
+    }
+    .row3IconLoopLg {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5%;
     }
     .row3IconLoopPh {
         grid-template-columns: repeat(3, 1fr);
@@ -206,6 +218,18 @@ export default{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        margin-top: 10%;
+        font-size: 20px;
+    }
+    .row3IconLoopItemLg {
+        margin-top: 20%;
+        font-size: 15px;
+    }
+    .row3IconLoopItemLg img {
+        width: 90px;
+    }
+    .row3IconLoopItemLg div {
+        font-weight: 500;
     }
     .row3IconLoopItemMd img {
         width: 30%;
@@ -218,15 +242,18 @@ export default{
     }
     .row3IconLoopItemPl {
         font-size: 12px;
+        margin-top: 20%;
     }
     .row3IconLoopItemPh img {
         width: 40%;
     } 
     .row3IconLoopItemPh {
         font-size: 10px;
+        margin-top: 15%;
     }
-    .row3IconLoopItemPh {
+    .row3IconLoopItemPh1 {
         font-size: 10px;
+        margin-top: 10%;
     }
     .row3IconLoopItemPh1 img {
         width: 40%;
