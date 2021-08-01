@@ -34,13 +34,39 @@
             >
                 ОСНОВНЫЕ ПАРТНЕРЫ ФОНДА 
             </div>
-            <div class="row3IconLoop"
-                :class="{row3IconLoopLg: scaleX < 1380 && scaleX > 1024,
-                         row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
-                         row3IconLoopPl: scaleX > 425 && scaleX < 768}"
-            >
-                <img v-if="scaleX > 425" :src="require('@/assets/Slide12/Group27.svg')">
-                <img v-if="scaleX <= 425" :src="require('@/assets/Slide12/Group28.svg')">
+            <div class="row3BigLoop">
+                <div class="row3IconLoop"
+                :class="{row3IconLoopLg: scaleX < 1440 && scaleX > 1024,
+                            row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
+                            row3IconLoopPl: scaleX > 425 && scaleX < 768}"
+                >
+                    <div class="col1">
+                        <div class="col1Item"
+                            v-for="item in Mas"
+                            :key="item"
+                        >
+                            <img :src="require(`@/assets/Slide12/${item}.png`)" alt="">
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <div class="col1Item"
+                            v-for="item in Mas2"
+                            :key="item"
+                        >
+                            <img :src="require(`@/assets/Slide12/${item}.png`)" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row3IconLoop2">
+                    <div class="row3IconItem">
+                        <img :src="require('@/assets/Slide12/9.png')" alt="">
+                        <div class="row3Text">
+                            <div class="Text1">590 МЛН РУБ</div>
+                            <div class="Text2">АКТИВЫ ФОНДА НА 2020</div>
+                        </div>
+                    </div>
+                    <img :src="require('@/assets/Slide12/10.png')" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -50,7 +76,9 @@
 
 export default{
  data: () => ({
-        back: null
+        back: null,
+        Mas: [1, 2, 3, 4, 5, 6],
+        Mas2: [7, 8]
     }),
     computed: {
         // ...mapGetters([
@@ -157,6 +185,18 @@ export default{
     .row3HeadPh {
         font-size: 12px;
     }
+    .row3BigLoop {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .row3IconLoop {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     .row3IconLoopLg img {
         width: 55%;
     }
@@ -166,9 +206,54 @@ export default{
     .row3IconLoopPl img {
         width: 90%;
     }
-    .itemText {
-        margin-top: 5%;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+    .col1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+    .col1Item {
+        display: flex;
+        justify-content: center;
+    }
+    .col1Item img {
+        width: 130px;
+    }
+    .col2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .row3IconItem {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .row3IconLoop2 {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .row3IconItem img {
+        height: 160px;
+    }
+    .row3Text {
+        margin-bottom: 10%;
+    }
+    .Text1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        color: #122352;
+        font-weight: 700;
+        position: relative;
+        right: 10%;
+        width: 110%;
+    }
+    .Text2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: #393b41;
+        font-weight: 500;
     }
 </style>

@@ -31,13 +31,59 @@
             :class="{row3Pl: scaleX >= 768 && scaleX <= 1240,
                      row3Ph: scaleX < 768}"
         >
+            <div class="row3Name">
+                <div class="Name">370 ЛАБОРАТОРИЙ</div>
+                <div class="Text">В ТОМ ЧИСЛЕ</div>
+            </div>
             <div class="row3IconLoop"
                 :class="{row3IconLoopLg: scaleX < 1380 && scaleX > 1024,
                          row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
                          row3IconLoopPl: scaleX > 425 && scaleX < 768}"
             >
-                <img v-if="scaleX > 425" :src="require('@/assets/Slide11/Group25.svg')">
-                <img v-if="scaleX <= 425" :src="require('@/assets/Slide11/Group26.svg')">
+                <div class="col1">
+                    <div class="col11">
+                        <img :src="require('@/assets/Slide11/1.png')">
+                    </div>
+                    <div class="col12">
+                        • Международная <br> лаборатория горения <br> и энергетики <br><br>
+                        • Научно-исследовательская <br> лаборатория ледовых <br> исследований <br><br>
+                        • Лаборатория необитаемых <br> подводных аппаратов <br> и систем <br><br>
+                        • Центр коллективного <br> пользования <br> «Автоматизированное машиностроение» 
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="col21">
+                        <div class="col211">
+                            <img :src="require('@/assets/Slide11/2.png')">
+                        </div>
+                        <div class="col12">
+                            • Лаборатория <br> морской микробиологии <br><br>
+                            • Лаборатория <br> химической экологии <br><br>
+                            • Лаборатория современных <br> материалов и технологий
+                        </div>
+                    </div>
+                    <div class="col21 extra">
+                        <div class="col221">
+                            <img :src="require('@/assets/Slide11/3.png')">
+                        </div>
+                        <div class="col12 ">
+                            • Лаборатория комплексных <br>
+                            археологических исследований <br>
+                            и экспертиз объектов <br>
+                            культурного наследия <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col1">
+                    <div class="col11">
+                        <img :src="require('@/assets/Slide11/4.png')">
+                    </div>
+                    <div class="col12">
+                        • Лаборатория <br> фармакологии <br> и биоиспытаний <br><br>
+                        • Лаборатория <br> биомедицинских <br> клеточных технологий <br><br>
+                        • Лаборатория <br> «Геномная медицина» 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -143,6 +189,26 @@ export default{
     .row3Ph {
         width: 85%;
     }
+    .row3Name {
+        font-family: "Roboto", sans-serif;
+        margin: 3% 0 0 1%;
+    }
+    .Name {
+        font-size: 30px;
+        color: #122352;
+        font-weight: 700;
+    }
+    .Text {
+        margin-top: 1%;
+        font-size: 20px;
+        color: #122352;
+        font-weight: 400;
+    }
+    .row3IconLoop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3%;
+    }
     .row3IconLoopLg img {
         width: 55%;
     }
@@ -152,9 +218,22 @@ export default{
     .row3IconLoopPl img {
         width: 90%;
     }
-    .itemText {
-        margin-top: 5%;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+    .col1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .col21 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .col12 {
+        margin-left: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+    }
+    .extra {
+        margin-top: 10%;
     }
 </style>
