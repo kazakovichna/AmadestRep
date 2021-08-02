@@ -1,7 +1,8 @@
 <template>
     <div class="main12">
         <div class="row1"
-            :class="{row1Lg: scaleX >= 1440,
+            :class="{row1Lg: scaleX >= 1440 && scaleY >= 1024,
+                     row1LgSm: scaleX >= 1440 && scaleY < 1024,
                      row1Md: scaleX > 1240 && scaleX < 1440,
                      row1Pl: scaleX >= 768 && scaleX <= 1240,
                      row1Ph: scaleX < 768}"
@@ -25,11 +26,14 @@
             </div>
         </div>
         <div class="row3"
-            :class="{row3Pl: scaleX >= 768 && scaleX <= 1240,
+            :class="{row3Lg: scaleX >= 1440 && scaleY >= 1024,
+                     row3LgSm: scaleX >= 1440 && scaleY < 1024,
+                     row3Pl: scaleX >= 768 && scaleX < 1440,
                      row3Ph: scaleX < 768}"
         >
             <div class="row3Head"
-                :class="{row3HeadPl: scaleX >= 768 && scaleX < 1024,
+                :class="{row3HeadLgSm: scaleX >= 1440 && scaleY < 1024, 
+                         row3HeadPl: scaleX >= 768 && scaleX < 1024,
                          row3HeadPh: scaleX < 768}"
             >
                 ОСНОВНЫЕ ПАРТНЕРЫ ФОНДА 
@@ -123,6 +127,10 @@ export default{
     .row1Lg {
         font-size: 40px;
     }
+    .row1LgSm {
+        margin-bottom: 1%;
+        font-size: 40px;
+    }
     .row1Md {
         font-size: 25px;
     }
@@ -168,6 +176,9 @@ export default{
         background-color: rgba(255, 255, 255, 0.75);
         padding: 1% 3% 3% 3%;
     }
+    .row3LgSm {
+        padding: 1% 3% 0 3%;
+    }
     .row3Pl {
         width: 80%;
     }
@@ -178,6 +189,9 @@ export default{
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
         margin-bottom: 2%;
+    }
+    .row3HeadLgSm {
+        margin-bottom: 0;
     }
     .row3HeadPl {
         font-size: 15px;

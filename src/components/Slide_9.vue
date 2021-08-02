@@ -231,6 +231,16 @@ export default{
     .row3IconLoopItemLg div {
         font-weight: 500;
     }
+    .row3IconLoopItemLgSm {
+        margin-top: 10%;
+        font-size: 15px;
+    }
+    .row3IconLoopItemLgSm img {
+        width: 90px;
+    }
+    .row3IconLoopItemLgSm div {
+        font-weight: 500;
+    }
     .row3IconLoopItemMd img {
         width: 30%;
     }

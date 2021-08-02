@@ -1,7 +1,8 @@
 <template>
     <div class="main11">
         <div class="row1"
-            :class="{row1Lg: scaleX >= 1440,
+            :class="{row1Lg: scaleX >= 1440 && scaleY >= 1024,
+                     row1LgSm: scaleX >= 1440 && scaleY < 1024,
                      row1Md: scaleX > 1240 && scaleX < 1440,
                      row1Pl: scaleX >= 768 && scaleX <= 1240,
                      row1Ph: scaleX < 768}"
@@ -9,7 +10,8 @@
             ЦЕНТР КОЛЛЕКТИВНОГО ПОЛЬЗОВАНИЯ
         </div>
         <div class="row2"
-            :class="{row2Lg: scaleX >= 1440,
+            :class="{row2Lg: scaleX >= 1440 && scaleY >= 1024,
+                     row2LgSm: scaleX >= 1440 && scaleY < 1024,
                      row2Md: scaleX > 1240 && scaleX < 1440,
                      row2Pl: scaleX >= 768 && scaleX <= 1240,
                      row2Ph: scaleX < 768 }"
@@ -31,7 +33,9 @@
             :class="{row3Pl: scaleX >= 768 && scaleX <= 1240,
                      row3Ph: scaleX < 768}"
         >
-            <div class="row3Name">
+            <div class="row3Name"
+                :class="{row3NameLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024}"
+            >
                 <div class="Name">370 ЛАБОРАТОРИЙ</div>
                 <div class="Text">В ТОМ ЧИСЛЕ</div>
             </div>
@@ -138,6 +142,9 @@ export default{
     .row1Lg {
         font-size: 40px;
     }
+    .row1LgSm {
+        margin-bottom: 1%;
+    }
     .row1Md {
         font-size: 25px;
     }
@@ -158,6 +165,9 @@ export default{
     }
     .row2Lg {
         font-size: 20px;
+    }
+    .row2LgSm {
+        margin-bottom: 2%;
     }
     .row2Md {
         font-size: 15px;
@@ -192,6 +202,9 @@ export default{
     .row3Name {
         font-family: "Roboto", sans-serif;
         margin: 3% 0 0 1%;
+    }
+    .row3NameLgSm {
+        margin: 1% 0 0 1%;
     }
     .Name {
         font-size: 30px;

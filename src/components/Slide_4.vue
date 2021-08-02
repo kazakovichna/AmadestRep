@@ -392,6 +392,7 @@ export default{
     .itemText {
         text-align: center;
         font-family: 'Roboto', sans-serif;
+        font-size: 15px;
     }
     .itemTextPh {
         text-align: center;

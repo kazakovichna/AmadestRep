@@ -32,7 +32,8 @@
                      row3Ph: scaleX < 768}"
         >
             <div class="row3IconLoop"
-                :class="{row3IconLoopLg: scaleX >= 1440 && scaleX < 2000,
+                :class="{row3IconLoopLg: scaleX >= 1440 && scaleX < 2000 && scaleY >= 1024,
+                         row3IconLoopLgSm: scaleX >= 1440 && scaleX < 2000 && scaleY < 1024,
                          row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
                          row3IconLoopPl: scaleX < 768 }"
             >
@@ -186,7 +187,7 @@ export default{
         padding: 3% 3% 6% 3%;
     }
     .row3LgSm {
-        padding: 3% 3% 3% 3%;
+        padding: 1% 3% 6% 3%;
     }   
     .row3Pl {
         width: 80%;
@@ -196,7 +197,11 @@ export default{
     }
     .row3IconLoop {
         display: grid;
+        grid-row-gap: 5%;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .row3IconLoopLgSm {
+        grid-row-gap: 10%;
     }
     .row3IconLoopMd img {
         width: 90%;
@@ -205,7 +210,7 @@ export default{
         grid-template-columns: repeat(2, 1fr);
     }
     .row3IconLoopItem {
-        margin-top: 10%;
+        margin-top: 15%;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;

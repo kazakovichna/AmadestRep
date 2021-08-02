@@ -148,7 +148,7 @@ export default{
     .row3 {
         width: 60%;
         background-color: rgba(255, 255, 255, 0.75);
-        padding: 0 3% 3% 3%;
+        padding: 0 3% 1% 3%;
     }
     .row3Pl {
         width: 80%;
@@ -208,14 +208,30 @@ export default{
     .row2Loop2 .row2LoopItem img {
         width: 90%;
         position: relative;
-        bottom: 50%;
+        bottom: 70%;
         overflow: hidden;
     }
     .row {
-        margin-top: 5%;
+        margin-top: 2%;
+    }
+    .row4 {
+        margin-top: 0;
     }
     .row2Loop3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .row2Loop3 .row2LoopItem {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100px;
+        width: 100%;
+    }
+    .row2Loop3 .row2LoopItem img {
+        width: 90%;
+        position: relative;
+        bottom: 90%;
+        overflow: hidden;
     }
 </style>
