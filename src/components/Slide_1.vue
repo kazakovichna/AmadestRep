@@ -222,7 +222,7 @@ export default {
     }
     .bodyDivSm {
         height: 80%;
-        margin-top: 0;
+        margin-top: 5%;
         display: flex;
         align-items: center;
         justify-content: flex-start;

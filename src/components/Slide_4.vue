@@ -43,29 +43,29 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemText">
-                        Politics and Economics in Eurasia (магистратура)
+                        Politics <br> and Economics <br> in Eurasia <br> (магистратура)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemText">
-                        Экономика (бакалавриат)
+                        Экономика <br> (бакалавриат)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemText">
-                        Мировая экономика Finance (бакалавриат) 
-                        <br> <br>  Мировая экономика / Management Studies(бакалавриат)
+                        Мировая экономика / <br> Finance <br> (бакалавриат) 
+                        <br> <br>  Мировая экономика / <br> Management Studies <br> (бакалавриат)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemText">
-                        Мировая экономика (бакалавриат)
+                        Мировая экономика <br> (бакалавриат)
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Politics and Economics in Eurasia (магистратура)
+                        Politics <br> and Economics <br> in Eurasia <br> (магистратура)
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Экономика (бакалавриат)
+                        Экономика <br> (бакалавриат)
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Мировая экономика Finance (бакалавриат) 
+                        Мировая экономика / <br> Finance <br> (бакалавриат) 
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Мировая экономика (бакалавриат)
+                        Мировая экономика <br> (бакалавриат)
                     </div>
                 </div>
             </div>
@@ -168,30 +168,31 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX > 768 }"
                 >
                     <div class="itemText">
-                        Процессы и аппараты химической технологии (магистратура)
-                        <br> <br> Кораблестроение (бакалавриат)
+                        Процессы и аппараты <br> химической технологии <br> (магистратура)
+                        <br> <br> Кораблестроение <br> (бакалавриат)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX > 768 }"
                 >
                     <div class="itemText">
-                        Правовое регулирование и управление контрактной деятельностью (магистратура)
+                        Правовое регулирование <br> и управление <br>
+                        контрактной <br> деятельностью <br> (магистратура)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX > 768 }"
                 >
                     <div class="itemText">
-                       Искусственный интеллект и большие данные (магистратура)
-                       <br> <br> Финансовые стратегии и технологии банковского института (магистратура)
+                       Искусственный <br> интеллект <br> и большие данные <br> (магистратура)
+                       <br> <br> Финансовые стратегии <br> и технологии <br> банковского института <br> (магистратура)
                     </div>
                 </div>
                 <div class="row3IconText"
                     :class="{row3IconTextPl: scaleX < 970 && scaleX > 768 }"
                 >
                     <div class="itemText">
-                        Химическая инженерия (Chemical Engineering) (магистратура)
+                        Химическая инженерия <br> (Chemical Engineering) <br> (магистратура)
                     </div>
                 </div>
             </div>
@@ -216,8 +217,8 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Процессы и аппараты химической технологии (магистратура)
-                        <br> <br> Кораблестроение (бакалавриат)
+                        Процессы и аппараты <br> химической технологии <br> (магистратура)
+                        <br> <br> Кораблестроение <br> (бакалавриат)
                     </div>
                 </div>
 
@@ -225,7 +226,8 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Правовое регулирование и управление контрактной деятельностью (магистратура)
+                        Правовое регулирование <br> и управление <br> 
+                        контрактной <br> деятельностью <br> (магистратура)
                     </div>
                 </div>
 
@@ -241,8 +243,8 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Искусственный интеллект и большие данные (магистратура)
-                       <br> <br> Финансовые стратегии и технологии банковского института (магистратура)
+                        Искусственный <br> интеллект <br> и большие данные <br> (магистратура)
+                       <br> <br> Финансовые стратегии <br> и технологии <br> банковского института <br> (магистратура)
                     </div>
                 </div>
 
@@ -250,7 +252,7 @@
                     :class="{row3IconTextPl: scaleX < 970 && scaleX >= 768 }"
                 >
                     <div class="itemTextPh">
-                        Химическая инженерия (Chemical Engineering) (магистратура)
+                        Химическая инженерия <br> (Chemical Engineering) <br> (магистратура)
                     </div>
                 </div>
             </div>
@@ -337,6 +339,11 @@ export default{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /* grid-gap: 10%; */
+    }
+    .row3IconLoopLgSm .row3IconItem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .row3IconLoopLgSm .row3IconItem img {
         width: 130px;

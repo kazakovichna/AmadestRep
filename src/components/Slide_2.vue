@@ -153,7 +153,7 @@ export default{
     .main2 {
         overflow: hidden;
         background-image: url('../assets/Slide2/back.png');
-        background-position: center center;
+        background-position: top center;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -258,7 +258,7 @@ export default{
         grid-gap: 1%;
     }
     .row3IconLoopLgSm {
-        margin-top: 2%;
+        margin-top: 6%;
     }
     .row3IconLoopPh {
         grid-template-columns: repeat(3, 1fr);

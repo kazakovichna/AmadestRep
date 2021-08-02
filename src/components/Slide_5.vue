@@ -47,8 +47,8 @@
                         <div class="textName">
                             {{item.name}}
                         </div>
-                        <div class="textText">
-                            {{item.text}}
+                        <div class="textText" style="font-size: 12px" v-html="item.text">
+                            
                         </div>
                     </div>
                 </div>  
@@ -66,37 +66,37 @@ export default{
             {
                 name: 'СЕТЕВАЯ ПРОГРАММА',
                 photo: '1', 
-                text: "организация совместной образовательной программы с партнером"
+                text: "организация совместной <br> образовательной программы <br> с партнером"
             },
             {
                 name: 'ПРОЕКТНАЯ ДЕЯТЕЛЬНОСТЬ',
                 photo: '2', 
-                text: "решение проектных задач, инициированных партнерами"
+                text: "решение проектных задач, <br> инициированных партнерами"
             },
             {
                 name: 'ПРОГРАММЫ  АКАДЕМИЧЕСКОГО ОБМЕНА',
                 photo: '3', 
-                text: "переподготовка специалистов по заказу отраслевого партнера"
+                text: "переподготовка <br> специалистов по заказу <br> отраслевого партнера"
             },
             {
                 name: 'СТАЖИРОВКА',
                 photo: '4', 
-                text: "приобретение опыта производственной деятельности в компании"
+                text: "приобретение опыта <br> производственной <br> деятельности в компании"
             },
             {
                 name: 'ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ',
                 photo: '5', 
-                text: "краткосрочное обучение в международных вузах"
+                text: "краткосрочное обучение <br> в международных вузах"
             },
             {
                 name: 'ПРАКТИКА',
                 photo: '6', 
-                text: "получение навыков практической работы на предприятии"
+                text: "получение навыков <br> практической работы <br> на предприятии"
             },
             {
                 name: 'КОНКУРСНОЕ ТРУДОУСТРОЙСТВО',
                 photo: '7', 
-                text: "отбор на вакантную должность или в кадровый резерв"
+                text: "отбор на вакантную <br> должность или в кадровый <br> резерв"
             }
         ]
     }),
@@ -196,7 +196,7 @@ export default{
         padding: 3%;
     }
     .row3LgSm {
-        padding: 0 3% 2% 3%;
+        padding: 0 3% 4% 3%;
     }
     .row3Pl {
         width: 80%;
@@ -240,10 +240,10 @@ export default{
         font-size: 12px;
     }
     .row3IconLoopItemLgSm {
-        margin-top: 5%;
+        margin-top: 15%;
     }
     .row3IconLoopItemLgSm img {
-        width: 60px;
+        width: 75px;
     }
     .row3IconLoopItemLgSm div .textText {
         font-size: 10px;
@@ -267,11 +267,12 @@ export default{
         font-size: 13px;
     }
     .itemText {
-        margin-left: 2%;
+        margin-left: 2%;   
         text-align: left;
         font-family: 'Roboto', sans-serif;
     }
     .textName {
         margin-bottom: 2%;
+        font-size: 15px;
     }
 </style>
