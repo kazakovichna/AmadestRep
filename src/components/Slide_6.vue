@@ -20,14 +20,18 @@
                          row3ImgPh: scaleX < 768 && scaleX > 425}"
             >
                 <div class="row2">
-                    <div class="row2row1">
+                    <div class="row2row1"
+                        :class="{row2row1Ph: scaleX < 768}"
+                    >
                         <div class="row2NameDiv">
                             <img :src="require('@/assets/Slide6/Fond.png')" alt="">
                             <div>
                                 ОТРАСЛЕВЫЕ КОМПАНИИ
                             </div>
                         </div>
-                        <div class="row2Loop">
+                        <div class="row2Loop"
+                            :class="{row2LoopPh: scaleX < 768}"
+                        >
                             <div class="row2LoopItem"
                                 v-for="item in Mas1"
                                 :key="item"
@@ -36,7 +40,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row2Loop2">
+                    <div class="row2Loop2"
+                        :class="{row2Loop2Ph: scaleX < 768}"
+                    >
                         <div class="row2LoopItem"
                                 v-for="item in Mas1"
                                 :key="item"
@@ -46,12 +52,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row2row1">
+                    <div class="row2row1"
+                        :class="{row2row1Ph: scaleX < 768}"
+                    >
                         <div class="row2NameDiv">
                             <img :src="require(`@/assets/Slide6/Fond2.png`)" alt="">                            
                             <div class="row2Name">ФОНДЫ</div>
                         </div>
-                        <div class="row2Loop">
+                        <div class="row2Loop"
+                            :class="{row2LoopPh: scaleX < 768}"
+                        >
                             <div class="row2LoopItem"
                                 v-for="item in Mas1"
                                 :key="item"
@@ -62,12 +72,16 @@
                     </div>
                 </div>
                 <div class="row4">
-                    <div class="row2row1">
+                    <div class="row2row1"
+                        :class="{row2row1Ph: scaleX < 768}"
+                    >
                         <div class="row2NameDiv">
                             <img :src="require(`@/assets/Slide6/Fond3.png`)" alt="">
                             <div class="row2Name">БАНКИ</div>
                         </div>
-                        <div class="row2Loop3">
+                        <div class="row2Loop3"
+                            :class="{row2Loop3Ph: scaleX < 768}"
+                        >
                             <div class="row2LoopItem"
                                 v-for="item in Mas2"
                                 :key="item"
@@ -175,6 +189,9 @@ export default{
         justify-content: flex-start;
         align-items: center;
     }
+    .row2row1Ph {
+        flex-direction: column;
+    }
     .row2NameDiv {
         display: flex;
         justify-content: flex-start;
@@ -190,6 +207,12 @@ export default{
     .row2Loop {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+    }
+    .row2LoopPh {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .row2LoopPh .row2LoopItem img {
+        width: 80px;
     }
     .row2LoopItem img {
         width: 100%;
@@ -209,6 +232,12 @@ export default{
         width: 90%;
         position: relative;
         bottom: 70%;
+        overflow: hidden;
+    }
+    .row2Loop2Ph .row2LoopItem img {
+        width: 90%;
+        position: relative;
+        bottom: 20%;
         overflow: hidden;
     }
     .row {
@@ -232,6 +261,12 @@ export default{
         width: 90%;
         position: relative;
         bottom: 90%;
+        overflow: hidden;
+    }
+    .row2Loop3Ph .row2LoopItem img {
+        width: 90%;
+        position: relative;
+        bottom: 20%;
         overflow: hidden;
     }
 </style>

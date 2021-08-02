@@ -364,7 +364,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 10%;
+        padding: 25% 0 25% 0;
         background-color: rgba(0, 0, 0, 0.4);
     }
     .descrTrd {
@@ -410,7 +410,9 @@ export default {
         text-align: right;
     }
     .descrSecSm {
-        width: 90%;
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 10%;
     }
     .descrSecFullLg {
         width: 100%;
