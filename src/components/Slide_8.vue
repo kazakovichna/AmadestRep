@@ -34,7 +34,9 @@
                          row3ImgPl: scaleX < 1024 && scaleX >= 768,
                          row3ImgPh: scaleX < 768 && scaleX > 425}"
             >
-                <div class="row_1">
+                <div class="row_1"
+                    :class="{row_1Ph: scaleX < 768}"
+                >
                         <div class="row2NameDiv">
                             <img :src="require('@/assets/Slide8/Tal1.png')" alt="">
                             <div>
@@ -53,7 +55,9 @@
                             </div>
                         </div>
                 </div>
-                <div class="row_2">
+                <div class="row_2"
+                    :class="{row_1Ph: scaleX < 768}"
+                >
                         <div class="row2NameDiv">
                             <img :src="require('@/assets/Slide8/Tal2.png')" alt="">
                             <div>
@@ -69,7 +73,9 @@
                             </div>
                         </div>
                 </div>
-                <div class="row_3">
+                <div class="row_3"
+                    :class="{row_1Ph: scaleX < 768}"
+                >
                         <div class="row2NameDiv">
                             <img :src="require('@/assets/Slide8/Tal3.png')" alt="">
                             <div>
@@ -212,6 +218,45 @@ export default{
         display: flex;
         justify-content: flex-start;
         align-items: center;
+    }
+    .row_1Ph {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .row_1Ph .row2Loop2 {
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        grid-gap: 5%;
+    }
+    .row_1Ph .row2Loop2 .row2LoopItem1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .row_1Ph .row2Loop2 .row2LoopItem1 div {
+        width: 100%;
+        text-align: center;
+    }
+    .row_1Ph .row2Loop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+    .row_1Ph .row2Loop img {
+        width: 60px;
+    }
+    .row_1Ph .row2Loop3 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+    }
+    .row_1Ph .row2Loop3 .row2LoopItem img {
+        bottom: 0%;
     }
     .row2NameDiv {
         display: flex;

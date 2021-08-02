@@ -38,7 +38,9 @@
             >
                 ОСНОВНЫЕ ПАРТНЕРЫ ФОНДА 
             </div>
-            <div class="row3BigLoop">
+            <div class="row3BigLoop"
+                :class="{row3BigLoopPh: scaleX < 768}"
+            >
                 <div class="row3IconLoop"
                 :class="{row3IconLoopLg: scaleX < 1440 && scaleX > 1024,
                             row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
@@ -61,7 +63,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row3IconLoop2">
+                <div class="row3IconLoop2"
+                    :class="{row3IconLoop2Ph: scaleX < 768}"
+                >
                     <div class="row3IconItem">
                         <img :src="require('@/assets/Slide12/9.png')" alt="">
                         <div class="row3Text">
@@ -204,6 +208,9 @@ export default{
         justify-content: flex-start;
         align-items: flex-start;
     }
+    .row3BigLoopPh {
+        flex-direction: column;
+    }
     .row3IconLoop {
         width: 60%;
         display: flex;
@@ -248,6 +255,13 @@ export default{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+    .row3IconLoop2Ph {
+        flex-direction: row;
+        width: 100%;
+    }
+    .row3IconLoop2Ph img {
+        width: 160px;
     }
     .row3IconItem img {
         height: 160px;

@@ -194,6 +194,7 @@ export default{
     }
     .row3Ph {
         width: 85%;
+        height: 80%;
     }
     .row3IconLoop {
         display: grid;
@@ -207,7 +208,10 @@ export default{
         width: 90%;
     }
     .row3IconLoopPl {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .row3IconLoopPl .row3IconLoopItem {
+        margin-top: 0;
     }
     .row3IconLoopItem {
         margin-top: 15%;

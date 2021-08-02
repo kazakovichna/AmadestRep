@@ -42,7 +42,7 @@
             <div class="row3IconLoop"
                 :class="{row3IconLoopLg: scaleX < 1380 && scaleX > 1024,
                          row3IconLoopMd: scaleX >= 768 && scaleX < 1024,
-                         row3IconLoopPl: scaleX > 425 && scaleX < 768}"
+                         row3IconLoopPl: scaleX < 768}"
             >
                 <div class="col1">
                     <div class="col11">
@@ -227,6 +227,10 @@ export default{
     }
     .row3IconLoopMd img {
         width: 90%;
+    }
+    .row3IconLoopPl {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5%;
     }
     .row3IconLoopPl img {
         width: 90%;
