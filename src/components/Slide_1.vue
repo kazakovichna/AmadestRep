@@ -158,7 +158,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
     .main1 {
         overflow: hidden;
         background-image: url('../assets/Slide1/1.jpg');
